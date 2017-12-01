@@ -10,4 +10,8 @@ public class Listing {
     public String id;
     @Embedded
     public Contact contact;
+    @Embedded
+    public Address address;
+    @Embedded
+    public Location location;
 }
