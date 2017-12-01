@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "listings",
+		"_postman_id": "7a95d632-d56a-6e39-d918-b32d1bd7b498",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"url": "http://localhost:8080/listings",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"contact\":{  \n      \"phone\":\"15126841100\"\n   },\n   \"address\":{  \n      \"address\":\"1011 W 5th St\",\n      \"postalCode\":\"1\",\n      \"countryCode\":\"US\",\n      \"city\":\"AYtin\",\n      \"state\":\"AX\",\n      \"country\":\"United States\"\n   },\n   \"location\":{  \n      \"lat\":40.4255485534668,\n      \"lng\":3.7075681686401367\n   }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"url": "http://localhost:8080/listings/a0d98c02-bd88-47d0-a257-10e108c9d30f",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"contact\":{  \n      \"phone\":\"15126841101\"\n   },\n   \"address\":{  \n      \"address\":\"1011 W 5th St\",\n      \"postalCode\":\"1011\",\n      \"countryCode\":\"US\",\n      \"city\":\"Austin\",\n      \"state\":\"TX\",\n      \"country\":\"United States\"\n   },\n   \"location\":{  \n      \"lat\":40.4255485534668,\n      \"lng\":3.7075681686401367\n   }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"url": "http://localhost:8080/listings/a0d98c02-bd88-47d0-a257-10e108c9d30f",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List",
+			"request": {
+				"url": "http://localhost:8080/listings",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"listing\":{  \n      \"contact\":{  \n         \"phone\":\"15126841100\",\n         \"formattedPhone\":\"+1 512­684­1100\"\n      }\n   }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "sortByState",
+			"request": {
+				"url": "http://localhost:8080/listings/search/sortByState",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"listing\":{  \n      \"contact\":{  \n         \"phone\":\"15126841100\",\n         \"formattedPhone\":\"+1 512­684­1100\"\n      }\n   }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
